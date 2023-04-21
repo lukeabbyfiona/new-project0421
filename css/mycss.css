@@ -1,0 +1,37 @@
+:root {
+    --mycolor001: #E3A6A1;
+    --mycolor002: #BC5F6A;
+    --mycolor003: #19B3B1;
+    --mycolor004: #034B61;
+    --mycolor005: #A6C2CE;
+    --mycolor006: #9C8F96;
+    --mycolor007: #EBC57C;
+    --mycolor008: #6B799E;
+    --mycolor009: #FAA98B;
+    --mycolor010: #E6AECF;
+    --mycolor011: #AEE0DD;
+    --mycolor012: #01ACBD;
+    --mycolor013: #E95761;
+    --mycolor014: #290F02;
+    --mycolor015: #1E4620;
+    --mycolor016: #3C1832;
+    --mycolor017: #f7eaf3;
+}
+.demo{
+    border: 2px solid var(--mycolor004);
+    padding: 30px;
+    margin: 30px;
+    width: 95%;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-900{
+    font-weight: 900;
+}
