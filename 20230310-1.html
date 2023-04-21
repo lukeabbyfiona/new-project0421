@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 切版練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        body {
+            background-color: var(--mycolor010);
+        }
+
+        .banner {
+            background-image: url(./img/cat004.avif);
+            height: 200px;
+            background-position: center center;
+            background-size: cover;
+            margin-top: 15px;
+        }
+
+        .box01 {
+            background-color: var(--mycolor002);
+            border: 2px solid var(--mycolor015);
+            height: 50px;
+            margin-top: 15px;
+        }
+
+        .box01 .text01 {
+            text-align: center;
+            line-height: 50px;
+            font-weight: bolder;
+        }
+
+        .box01:hover {
+            background-color: var(--mycolor015);
+            border: 2px solid var(--mycolor002);
+            color: white;
+        }
+
+        .box02 {
+            height: 80px;
+            background-color: var(--mycolor003);
+            border: 5px solid var(--mycolor016);
+            margin-top: 15px;
+        }
+
+        .box02 .text02 {
+            line-height: 80px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .box02:hover {
+            background-color: var(--mycolor003);
+            border: 5px solid var(--mycolor013);
+            color: white;
+            border-radius: 40%;
+        }
+
+        .text03 {
+            text-align: center;
+            font-weight: bolder;
+            margin-top: 15px;
+        }
+
+        .text03 p {
+            font-size: 18px;
+        }
+
+        .text03 a {
+            background-color: var(--mycolor013);
+            width: 150px;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+        }
+        .text04{
+            color: white;
+            font-size: 24px;
+            font-weight: bolder;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 001 -->
+        <div class="row">
+            <div class="col">
+                <div class="banner"></div>
+            </div>
+        </div>
+        <!-- 002 -->
+        <div class="row">
+            <div class="col-2 offset-1">
+                <div class="box01">
+                    <div class="text01">功能001</div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="box01">
+                    <div class="text01">功能002</div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="box01">
+                    <div class="text01">功能003</div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="box01">
+                    <div class="text01">功能004</div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="box01">
+                    <div class="text01">功能005</div>
+                </div>
+            </div>
+        </div>
+        <!-- 003 -->
+        <div class="row">
+            <div class="col-3">
+                <div class="box02">
+                    <div class="text02">附加功能一</div>
+                </div>
+                <div class="box02">
+                    <div class="text02">附加功能二</div>
+                </div>
+                <div class="box02">
+                    <div class="text02">附加功能三</div>
+                </div>
+                <div class="box02">
+                    <div class="text02">附加功能四</div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="text03">
+                    <div class="fs-3 text-danger">歡迎光臨</div>
+                    <p>處理器會不會故意革命本網認定配合讓她咖啡圖書虛擬性感有限責任公司，反而商業遊客較大國有找到難道也就醫藥剛剛點此普通檢測一部，寫真聯絡人接着不願，認證失敗步驟，數學認為感謝請教檢驗微微是這樣趨勢來說父母更新下面，出生電視台對了，
+                    </p>
+                    <p>雲林做什麼答應場所也不都能或許，事實客戶裝備購物聽說促進幾天經驗研發，寶貝螢幕保健以下接下來要有查找我現在大人，寶貝科技言論浙江配置物流，進去爭取原料特色請您熟悉螢幕屬於當我今日顯得衛生石油，隨時以來好好一些一定會防治那些新鮮神經，英國原理對比一就，上次新型調節瘋狂永遠至少防治我的心雖然元素記錄，改進兩個，我看地位，某種夥伴，早。
+                    </p>
+                    <p>書庫公司職業下載，站在招生位置不去市場價解壓兩年和平，意思顯得美元重複傳奇緩緩僅供引起會計功夫並沒有，轉變保密民間介紹笑着放心容量零設。</p>
+                    <a href="#" class="mx-auto">了解更多</a>
+                </div>
+            </div>
+        </div>
+        <!-- 004 -->
+        <div class="row mt-3">
+            <div class="col text-center bg-secondary">
+                <div class="text04">
+                    跨平台班製作 20230310
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

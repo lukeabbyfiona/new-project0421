@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap-表格table 練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        @media screen and (max-width:768px) {
+            .table-rwd thead {
+                display: none;
+            }
+
+            .table-rwd tbody tr {
+                display: block;
+                border: 2px solid var(--mycolor005);
+                margin-top: 15px;
+            }
+
+            .table-rwd tbody tr td {
+                display: block;
+                overflow: hidden;
+            }
+
+            .table-rwd tbody tr td:before {
+                content: attr(data-th) " : ";
+                color: white;
+                font-weight: bolder;
+                background-color: #9770d3;
+                font-size: 20px;
+                display: block;
+                float: left;
+                width: 30%;
+            }
+
+            .table-rwd tbody tr td span.table-col {
+                display: block;
+                float: left;
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-hover table-bordered table-striped table-rwd">
+        <thead>
+            <tr>
+                <th>編號</th>
+                <th>品名</th>
+                <th>單價</th>
+                <th>內容物</th>
+                <th>備註(說明)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-th="編號">001</td>
+                <td data-th="品名"><a href="#">榛果拿鐵</a> </td>
+                <td data-th="單價">95元</td>
+                <td data-th="內容物">榛果糖漿，牛奶</td>
+                <td data-th="備註(說明)">*hot only</td>
+            </tr>
+            <tr>
+                <td data-th="編號">002</td>
+                <td data-th="品名"> <a href="#">抹茶拿鐵</a></td>
+                <td data-th="單價">90元</td>
+                <td data-th="內容物">抹茶粉，牛奶</td>
+                <td data-th="備註(說明)">*all</td>
+            </tr>
+            <tr>
+                <td data-th="編號">003</td>
+                <td data-th="品名"><a href="#">巧克力拿鐵</a></td>
+                <td data-th="單價">95元</td>
+                <td data-th="內容物">99%巧克力塊，牛奶</td>
+                <td data-th="備註(說明)">*hot only</td>
+            </tr>
+            <tr>
+                <td data-th="編號">004</td>
+                <td data-th="品名"><a href="#">黑糖拿鐵</a></td>
+                <td data-th="單價">85元</td>
+                <td data-th="內容物">黑糖糖漿，牛奶</td>
+                <td data-th="備註(說明)">*hot only</td>
+            </tr>
+            <tr>
+                <td data-th="編號">005</td>
+                <td data-th="品名"><a href="#">咖啡拿鐵</a></td>
+                <td data-th="單價">90元</td>
+                <td data-th="內容物">咖啡豆(配方豆)，牛奶</td>
+                <td data-th="備註(說明)">*僅使用本店配方豆</td>
+            </tr>
+            <tr>
+                <td data-th="編號">006</td>
+                <td data-th="品名"><a href="#">手沖咖啡(淺焙)</a></td>
+                <td data-th="單價">120元</td>
+                <td data-th="內容物">可指定咖啡豆</td>
+                <td data-th="備註(說明)">*all</td>
+            </tr>
+            <tr>
+                <td data-th="編號">007</td>
+                <td data-th="品名"><a href="#">手沖咖啡(中焙)</a></td>
+                <td data-th="單價">120元</td>
+                <td data-th="內容物">可指定咖啡豆</td>
+                <td data-th="備註(說明)">*all</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

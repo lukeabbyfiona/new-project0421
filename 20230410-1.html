@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch11表單-2</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        body{
+            font-weight: 900;
+        }
+        .myhouse{
+            width: 100px;
+            height: 100px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+        }
+        .mycolor{
+            width: 400px;
+            height: 180px;
+            border: 2px solid #ccc;
+            background-color: rgb(100,123,50);
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+    <!-- 1. Switch -->
+    <div class="demo">
+        <div class="fs-2">1. Switch</div>
+        <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" role="switch"
+            id="myled" name="myled">
+            <label for="myled" class="form-check-label" id="myled_text">開關燈</label>
+        </div>
+        <div class="myhouse"></div>
+    </div>
+    <!-- 2. Range -->
+    <div class="demo">
+        <div class="fs-2">2. Range</div>
+        <label for="age" class="form-label" id="age_text">年齡</label>
+        <input type="range" class="form-range" id="age" name="age" min="1" max="80">
+        <hr>
+        <label for="red" class="form-label" id="red_text">紅燈</label>
+        <input type="range" class="form-range" id="red" name="red" min="0" max="255" onchange="set_color()">
+        <label for="green" class="form-label" id="green_text">綠燈</label>
+        <input type="range" class="form-range" id="green" name="green" min="0" max="255" onchange="set_color()">
+        <label for="blue" class="form-label" id="blue_text">藍燈</label>
+        <input type="range" class="form-range" id="blue" name="blue" min="0" max="255" onchange="set_color()">
+        <label for="tra" class="form-label" id="tra_text">透明度</label>
+        <input type="range" class="form-range" id="tra" name="tra" min="0" max="1" step="0.1" onchange="set_color()">
+        <div class="mycolor"></div>
+    </div>
+    <!-- 3. form-check-inline -->
+    <div class="demo">
+        <div class="fs-2">3. form-check-inline</div>
+        <div class="form-check form-check-inline">
+            <input type="checkbox" id="" name="mycheckbox01" class="form-check-input">
+            <label for="" class="form-check-label">選項001</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="checkbox" id="" name="mycheckbox01" class="form-check-input">
+            <label for="" class="form-check-label">選項002</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="checkbox" id="" name="mycheckbox01" class="form-check-input">
+            <label for="" class="form-check-label">選項003</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="checkbox" id="" name="mycheckbox01" class="form-check-input">
+            <label for="" class="form-check-label">選項004</label>
+        </div>
+    </div>
+    <!-- 4. form-check-radio -->
+    <div class="demo">
+        <div class="fs-2">4. form-check-radio</div>
+        <div class="form-check form-check-inline">
+            <input type="radio" id="" name="myradio01" class="form-check-input">
+            <label for="" class="form-check-label">選項001</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="radio" id="" name="myradio01" class="form-check-input">
+            <label for="" class="form-check-label">選項002</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="radio" id="" name="myradio01" class="form-check-input">
+            <label for="" class="form-check-label">選項003</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="radio" id="" name="myradio01" class="form-check-input">
+            <label for="" class="form-check-label">選項004</label>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        // 01. 開關燈
+        $("#myled").change(function(){
+            console.log($(this).is(':checked'));
+            if($(this).is(':checked')){
+                //開燈
+                $("#myled_text").html("開燈");
+                $(".myhouse").css("background-color","white");
+            }else{
+                //關燈
+                $("#myled_text").html("關燈");
+                $(".myhouse").css("background-color","black");
+            }
+        });
+
+        // 02. 年齡 和 燈顏色變化
+        $("#age").change(function(){
+            console.log($(this).val());
+            $("#age_text").html($(this).val()+"歲");
+        });
+
+        $("#red").change(function(){
+            console.log($(this).val());
+            $("#red_text").html("紅燈: "+$(this).val());
+        });
+
+        $("#green").change(function(){
+            console.log($(this).val());
+            $("#green_text").html("綠燈: "+$(this).val());
+        });
+
+        $("#blue").change(function(){
+            console.log($(this).val());
+            $("#blue_text").html("藍燈: "+$(this).val());
+        });
+
+        $("#tra").change(function(){
+            console.log($(this).val());
+            $("#tra_text").html("透明度: "+$(this).val());
+        });
+
+        function set_color(){
+            var red = $("#red").val();
+            var green = $("#green").val();
+            var blue = $("#blue").val();
+            var tra = $("#tra").val();
+            console.log(red+green+blue+tra);
+
+            var color_setting = 'rgba(' + red + ',' + green + ',' + blue + ',' + tra + ')';
+            console.log(color_setting);
+
+            $(".mycolor").css("background-color", color_setting);
+        };
+    </script>
+</body>
+</html>
